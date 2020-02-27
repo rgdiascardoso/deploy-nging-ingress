@@ -12,7 +12,7 @@ jobs:
           creds: '${{ secrets.AZURE_CREDENTIALS }}'
           cluster-name: testcluster
           resource-group: testspring
-      - name: Deploy rolling update to AKS cluster
+      - name: Deploy NGINX to k8s
         uses: Azure/k8s-deploy@v1
         with:
           namespace: nginx-ingress 
