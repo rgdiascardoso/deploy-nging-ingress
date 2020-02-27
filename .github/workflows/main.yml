@@ -15,6 +15,7 @@ jobs:
       - name: Deploy rolling update to AKS cluster
         uses: Azure/k8s-deploy@v1
         with:
+          namespace: nginx-ingress 
           manifests: |
             manifests/ns-and-sa.yaml
             manifests/rbac.yaml
